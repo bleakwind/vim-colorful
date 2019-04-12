@@ -14,12 +14,12 @@
 
 set background=dark
 if version > 580
-    hi clear
+    "hi clear
     if exists("syntax_on")
         syntax reset
     endif
 endif
-let g:colors_name="bwdark"
+let g:colors_name="colorful"
 
 "******************************************************************************
 " Color detail: System
