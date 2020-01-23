@@ -13,3 +13,4 @@
 "
 
 autocmd BufNewFile,BufRead *.{txt,text} setfiletype text
+

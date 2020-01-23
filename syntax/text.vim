@@ -35,6 +35,7 @@ syn match textDelimiterRemark   '\v^\s*[\+]+\s*$\c'
 syn match textTitleItem         '\v^\s*\=\=\=\>\s+.*\s*$\c'
 syn match textTitleCommand      '\v^\s*\#\s+.*\s*$\c'
 syn match textTitleComment      '\v^\s*\>\>\s+.*\s*$\c'
+syn match textContentItem         '\v^\s*\=\>\s+.*\s*$\c'
 
 "******************************************************************************
 " Color detail: text
@@ -46,6 +47,7 @@ hi link textDelimiterRemark             Function
 hi link textTitleItem                   Function
 hi link textTitleCommand                Identifier
 hi link textTitleComment                Comment
+hi link textContentItem                 Function
 
 let b:current_syntax = "text"
 if main_syntax == 'text'
