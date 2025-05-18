@@ -33,6 +33,7 @@ endif
 " ============================================================================
 " Color detail: Html
 " ============================================================================
+hi html_normal                          ctermfg=White       ctermbg=Black       cterm=NONE        guifg=#DDDDDD   guibg=#282C34   gui=NONE
 hi html_structures                      ctermfg=LightGreen  ctermbg=NONE        cterm=NONE        guifg=#C6E8AC   guibg=NONE      gui=NONE
 hi html_functions                       ctermfg=DarkCyan    ctermbg=NONE        cterm=NONE        guifg=#74C9C9   guibg=NONE      gui=NONE
 hi html_variables                       ctermfg=LightBlue   ctermbg=NONE        cterm=NONE        guifg=#AECEEE   guibg=NONE      gui=NONE
@@ -41,7 +42,8 @@ hi html_comment                         ctermfg=DarkGray    ctermbg=NONE        
 hi html_value                           ctermfg=Brown       ctermbg=NONE        cterm=NONE        guifg=#F8B551   guibg=NONE      gui=NONE
 hi html_error                           ctermfg=White       ctermbg=DarkMagenta cterm=NONE        guifg=#FFFFFF   guibg=#AE508D   gui=NONE
 hi html_nothing                         ctermfg=NONE        ctermbg=NONE        cterm=NONE        guifg=NONE      guibg=NONE      gui=NONE
-hi html_unknown                         ctermfg=Black       ctermbg=Yellow      cterm=NONE        guifg=Black     guibg=Yellow    gui=NONE
+hi html_unknown                         ctermfg=White       ctermbg=NONE        cterm=NONE        guifg=#DDDDDD   guibg=NONE      gui=NONE
+hi link htmlNormal                      html_normal
 hi link htmlArg                         html_variables
 hi link htmlArgCluster                  html_unknown
 hi link htmlBold                        html_value
@@ -60,12 +62,12 @@ hi link htmlError                       html_error
 hi link htmlEvent                       html_functions
 hi link htmlEventDQ                     html_variables
 hi link htmlEventSQ                     html_variables
-hi link htmlH1                          html_value
-hi link htmlH2                          html_value
-hi link htmlH3                          html_value
-hi link htmlH4                          html_value
-hi link htmlH5                          html_value
-hi link htmlH6                          html_value
+hi link htmlH1                          html_functions
+hi link htmlH2                          html_functions
+hi link htmlH3                          html_functions
+hi link htmlH4                          html_functions
+hi link htmlH5                          html_functions
+hi link htmlH6                          html_functions
 hi link htmlHead                        html_unknown
 hi link htmlHighlight                   html_unknown
 hi link htmlHighlightSkip               html_unknown

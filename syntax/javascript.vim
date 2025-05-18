@@ -96,7 +96,7 @@ hi link javaScriptCommand               javascript_unknown
 hi link javaScriptComment               javascript_comment
 hi link javaScriptLineComment           javascript_comment
 hi link javaScriptCommentTodo           javascript_structures
-hi link javaScriptSpecial               javascript_unknown
+hi link javaScriptSpecial               javascript_string
 hi link javaScriptStringS               javascript_string
 hi link javaScriptStringD               javascript_string
 hi link javaScriptCharacter             javascript_unknown
@@ -116,11 +116,11 @@ hi link javaScriptBoolean               javascript_variables
 hi link javaScriptRegexpString          javascript_string
 hi link javaScriptIdentifier            javascript_functions
 hi link javaScriptLabel                 javascript_structures
-hi link javaScriptException             javascript_unknown
+hi link javaScriptException             javascript_structures
 hi link javaScriptMessage               javascript_structures
 hi link javaScriptGlobal                javascript_structures
 hi link javaScriptMember                javascript_structures
-hi link javaScriptDeprecated            javascript_unknown
+hi link javaScriptDeprecated            javascript_variables
 hi link javaScriptReserved              javascript_structures
 hi link javaScriptDebug                 javascript_unknown
 hi link javaScriptConstant              javascript_unknown

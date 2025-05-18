@@ -29,38 +29,35 @@ set cpo&vim
 " Color match: text
 " ============================================================================
 syn match textDelimiterTop              '\v^\s*[\#]+\s*$\c'
-syn match textDelimiterSpecial          '\v^\s*[\*]+\s*$\c'
-syn match textDelimiterSubject          '\v^\s*[\=]+\s*$\c'
+syn match textDelimiterSubject          '\v^\s*([\*]+|[\=]+)\s*$\c'
 syn match textDelimiterList             '\v^\s*[\-]+\s*$\c'
-syn match textDelimiterRemark           '\v^\s*[\+]+\s*$\c'
-syn match textDelimiterSublist          '\v^\s*[\~]+\s*$\c'
+syn match textDelimiterRemark           '\v^\s*[\~]+\s*$\c'
 
-syn match textTitleSubject              '\v^\s*\=\=\=\>\>\>\s+.*\s*$\c'
-syn match textTitleItem                 '\v^\s*\=\=\=\>\s+.*\s*$\c'
+syn match textTitleTop                  '\v^\s*\=\=\=\>\>\>\s+.*\s*$\c'
+syn match textTitleSubject              '\v^\s*\=\=\=\>\s+.*\s*$\c'
 syn match textTitleList                 '\v^\s*\=\>\s+.*\s*$\c'
-syn match textTitleEnd                  '\v^\s*\#\#\#\s+.*\s*\#\#\#$\c'
+syn match textTitleRemark               '\v^\s*\-\>\s+.*\s*$\c'
 
 syn match textContentCommand            '\v^\s*[\#\%]\s+.*\s*$\c'
 syn match textContentComment            '\v^\s*\>\>\s+.*\s*$\c'
 
-
 " After textContentCommand
 syn match textTitleCopyright            '\v^\s*\#\s[\|\+].*[\|\+]\s\#$\c'
+syn match textTitleCopyright            '\v^\s*[\#]+\n\s*\#\s[\|\+].*[\|\+]\s\#$\c'
+syn match textTitleCopyright            '\v^\s*\#\s[\|\+].*[\|\+]\s\#\n\s*[\#]+$\c'
 
 " ============================================================================
 " Color detail: text
 " ============================================================================
-hi link textDelimiterTop                Statement
-hi link textDelimiterSpecial            Function
-hi link textDelimiterSubject            Function
-hi link textDelimiterList               Identifier
-hi link textDelimiterRemark             Identifier
-hi link textDelimiterSublist            Identifier
+hi link textDelimiterTop                String
+hi link textDelimiterSubject            Statement
+hi link textDelimiterList               Function
+hi link textDelimiterRemark             Comment
 
+hi link textTitleTop                    String
 hi link textTitleSubject                Statement
-hi link textTitleItem                   Function
-hi link textTitleList                   Identifier
-hi link textTitleEnd                    Statement
+hi link textTitleList                   Function
+hi link textTitleRemark                 Comment
 
 hi link textContentCommand              Identifier
 hi link textContentComment              Comment
