@@ -38,7 +38,9 @@ syn match textTitleSubject              '\v^\s*\=\=\=\>\s+.*\s*$\c'
 syn match textTitleList                 '\v^\s*\=\>\s+.*\s*$\c'
 syn match textTitleRemark               '\v^\s*\-\>\s+.*\s*$\c'
 
+syn match textContentCommand            '\v^\s*[\#\%]\s*$\c'
 syn match textContentCommand            '\v^\s*[\#\%]\s+.*\s*$\c'
+
 syn match textContentComment            '\v^\s*\>\>\s+.*\s*$\c'
 
 " After textContentCommand
