@@ -45,11 +45,11 @@ hi ColorColumn                      ctermfg=NONE        ctermbg=DarkGray    cter
 hi Folded                           ctermfg=Black       ctermbg=DarkGray    cterm=NONE      guifg=#A1ACC4   guibg=#21252B   gui=NONE
 hi FoldColumn                       ctermfg=Black       ctermbg=DarkGray    cterm=NONE      guifg=#59647A   guibg=#1D2228   gui=NONE
 hi SignColumn                       ctermfg=Red         ctermbg=DarkGray    cterm=NONE      guifg=#AE508D   guibg=#21252B   gui=NONE
-hi StatusLine                       ctermfg=Black       ctermbg=LightGray   cterm=NONE      guifg=#59647A   guibg=#171C22   gui=NONE
-hi StatusLineNC                     ctermfg=Black       ctermbg=White       cterm=NONE      guifg=#59647A   guibg=#171C22   gui=NONE
-hi StatusLineTerm                   ctermfg=White       ctermbg=Black       cterm=NONE      guifg=#59647A   guibg=#171C22   gui=NONE
-hi StatusLineTermNC                 ctermfg=White       ctermbg=Black       cterm=NONE      guifg=#59647A   guibg=#171C22   gui=NONE
-hi VertSplit                        ctermfg=Black       ctermbg=White       cterm=NONE      guifg=#171C22   guibg=#171C22   gui=NONE
+hi StatusLine                       ctermfg=LightGray   ctermbg=Black       cterm=NONE      guifg=#59647A   guibg=#171C22   gui=NONE
+hi StatusLineNC                     ctermfg=LightGray   ctermbg=Black       cterm=NONE      guifg=#59647A   guibg=#171C22   gui=NONE
+hi StatusLineTerm                   ctermfg=LightGray   ctermbg=Black       cterm=NONE      guifg=#59647A   guibg=#171C22   gui=NONE
+hi StatusLineTermNC                 ctermfg=LightGray   ctermbg=Black       cterm=NONE      guifg=#59647A   guibg=#171C22   gui=NONE
+hi VertSplit                        ctermfg=Black       ctermbg=Black       cterm=NONE      guifg=#171C22   guibg=#171C22   gui=NONE
 hi Directory                        ctermfg=LightBlue   ctermbg=NONE        cterm=NONE      guifg=#92BDE8   guibg=NONE      gui=NONE
 hi Search                           ctermfg=White       ctermbg=DarkMagenta cterm=NONE      guifg=#FFFFFF   guibg=#AE508D   gui=NONE
 hi IncSearch                        ctermfg=Black       ctermbg=Magenta     cterm=NONE      guifg=#000000   guibg=#FF939C   gui=NONE

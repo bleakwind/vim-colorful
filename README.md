@@ -1,6 +1,6 @@
 # vim-colorful
 
-## vim-colorful is a Vim color scheme...
+## vim-colorful is a vim color scheme...
 vim-colorful is a clean and fresh Vim color scheme with optimized syntax highlighting.
 
 ## Requirements
@@ -27,4 +27,3 @@ colorscheme colorful
 
 ## License
 BSD 2-Clause - See LICENSE file
-
