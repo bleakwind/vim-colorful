@@ -12,12 +12,12 @@
 " +--------------------------------------------------------------------------+
 "
 
-if !exists("main_syntax")
-    if exists("b:current_syntax")
+if !exists('main_syntax')
+    if exists('b:current_syntax')
         finish
     endif
     let main_syntax = 'text'
-elseif exists("b:current_syntax") && b:current_syntax == "text"
+elseif exists('b:current_syntax') && b:current_syntax == "text"
   finish
 endif
 syntax sync fromstart

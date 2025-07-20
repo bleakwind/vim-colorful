@@ -12,12 +12,12 @@
 " +--------------------------------------------------------------------------+
 "
 
-if !exists("main_syntax")
-    if exists("b:current_syntax")
+if !exists('main_syntax')
+    if exists('b:current_syntax')
         finish
     endif
     let main_syntax = 'javascript'
-elseif exists("b:current_syntax") && b:current_syntax == "javascript"
+elseif exists('b:current_syntax') && b:current_syntax == "javascript"
   finish
 endif
 syntax sync fromstart
@@ -59,7 +59,7 @@ syn keyword javaScriptMember            document event location
 syn keyword javaScriptDeprecated        escape unescape
 syn keyword javaScriptReserved          abstract boolean byte char class const debugger double enum export extends final float goto implements import int interface long native package private protected public short static super synchronized throws transient volatile
 
-if exists("javaScript_fold")
+if exists('javaScript_fold')
     syn match   javaScriptFunction      "\<function\>"
     syn region  javaScriptFunctionFold  start="\<function\>.*[^};]$" end="^\z1}.*$" transparent fold keepend
 

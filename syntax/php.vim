@@ -12,12 +12,12 @@
 " +--------------------------------------------------------------------------+
 "
 
-if !exists("main_syntax")
-    if exists("b:current_syntax")
+if !exists('main_syntax')
+    if exists('b:current_syntax')
         finish
     endif
     let main_syntax = 'php'
-elseif exists("b:current_syntax") && b:current_syntax == "php"
+elseif exists('b:current_syntax') && b:current_syntax == "php"
   finish
 endif
 syntax sync fromstart
@@ -26,7 +26,7 @@ let s:cpo_save = &cpo
 set cpo&vim
 
 runtime! $VIMRUNTIME/syntax/php.vim
-if exists("b:current_syntax")
+if exists('b:current_syntax')
     unlet b:current_syntax
 endif
 

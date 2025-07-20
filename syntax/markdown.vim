@@ -12,12 +12,12 @@
 " +--------------------------------------------------------------------------+
 "
 
-if !exists("main_syntax")
-    if exists("b:current_syntax")
+if !exists('main_syntax')
+    if exists('b:current_syntax')
         finish
     endif
     let main_syntax = 'markdown'
-elseif exists("b:current_syntax") && b:current_syntax == "markdown"
+elseif exists('b:current_syntax') && b:current_syntax == "markdown"
   finish
 endif
 syntax sync fromstart
@@ -26,7 +26,7 @@ let s:cpo_save = &cpo
 set cpo&vim
 
 runtime! $VIMRUNTIME/syntax/markdown.vim
-if exists("b:current_syntax")
+if exists('b:current_syntax')
     unlet b:current_syntax
 endif
 
