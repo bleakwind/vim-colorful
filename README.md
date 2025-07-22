@@ -3,6 +3,9 @@
 ## vim-colorful is a vim color scheme...
 vim-colorful is a clean and fresh Vim color scheme with optimized syntax highlighting.
 
+## Screenshot
+![Colorful Screenshot](https://github.com/bleakwind/vim-colorful/blob/main/vim-colorful.png)
+
 ## Requirements
 Recommended Vim 8.1+
 
