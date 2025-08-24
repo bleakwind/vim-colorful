@@ -68,7 +68,7 @@ hi MsgArea                          ctermfg=White       ctermbg=Black       cter
 hi MoreMsg                          ctermfg=LightBlue   ctermbg=NONE        cterm=Bold      guifg=#82BDE8   guibg=NONE      gui=Bold
 hi Question                         ctermfg=LightBlue   ctermbg=NONE        cterm=Bold      guifg=#82BDE8   guibg=NONE      gui=Bold
 hi QuickFixLine                     ctermfg=White       ctermbg=DarkMagenta cterm=NONE      guifg=#FFFFFF   guibg=#AE508D   gui=NONE
-hi WarningMsg                       ctermfg=Green       ctermbg=NONE        cterm=Bold      guifg=#B3D97D   guibg=NONE      gui=Bold
+hi WarningMsg                       ctermfg=Yellow      ctermbg=NONE        cterm=Bold      guifg=#EEBE77   guibg=NONE      gui=Bold
 hi ErrorMsg                         ctermfg=Red         ctermbg=NONE        cterm=Bold      guifg=#EF939C   guibg=NONE      gui=Bold
 hi MessageWindow                    ctermfg=LightBlue   ctermbg=NONE        cterm=Bold      guifg=#82BDE8   guibg=NONE      gui=Bold
 hi DiffAdd                          ctermfg=NONE        ctermbg=DarkGreen   cterm=NONE      guifg=NONE      guibg=#005E15   gui=NONE
