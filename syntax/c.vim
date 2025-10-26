@@ -84,12 +84,12 @@ hi link cCppInIf                        c_unknown
 hi link cCppInSkip                      c_unknown
 hi link cCppInWrapper                   c_unknown
 hi link cCppOut                         c_unknown
-hi link cCppOutElse                     c_unknown
+hi link cCppOutElse                     c_variables
 hi link cCppOutIf                       c_unknown
-hi link cCppOutIf2                      c_unknown
+hi link cCppOutIf2                      c_variables
 hi link cCppOutInGroup                  c_unknown
 hi link cCppOutSkip                     c_unknown
-hi link cCppOutWrapper                  c_unknown
+hi link cCppOutWrapper                  c_structures
 hi link cCppParen                       c_unknown
 hi link cCppSkip                        c_unknown
 hi link cCppString                      c_string
@@ -151,3 +151,4 @@ endif
 
 let &cpo = s:cpo_save
 unlet s:cpo_save
+
