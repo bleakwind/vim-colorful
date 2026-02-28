@@ -87,7 +87,7 @@ hi PmenuKindSel                     ctermfg=White       ctermbg=DarkMagenta cter
 hi PmenuExtraSel                    ctermfg=White       ctermbg=DarkMagenta cterm=NONE      guifg=#FFFFFF   guibg=#AE508D   gui=NONE
 hi ComplMatchIns                    ctermfg=White       ctermbg=DarkMagenta cterm=NONE      guifg=#FFFFFF   guibg=#AE508D   gui=NONE
 hi PopupNotification                ctermfg=Black       ctermbg=LightGray   cterm=NONE      guifg=#000000   guibg=#A9A9A9   gui=NONE
-hi PopupSelected                    ctermfg=Black       ctermbg=LightGray   cterm=NONE      guifg=#000000   guibg=#A9A9A9   gui=NONE
+hi PopupSelected                    ctermfg=White       ctermbg=DarkMagenta cterm=NONE      guifg=#FFFFFF   guibg=#AE508D   gui=NONE
 hi TabLine                          ctermfg=Black       ctermbg=DarkGray    cterm=NONE      guifg=#A9A9A9   guibg=#21252B   gui=NONE
 hi TabLineFill                      ctermfg=Black       ctermbg=Gray        cterm=NONE      guifg=#21252B   guibg=#21252B   gui=NONE
 hi TabLineSel                       ctermfg=Black       ctermbg=LightGray   cterm=NONE      guifg=#000000   guibg=#A9A9A9   gui=NONE
