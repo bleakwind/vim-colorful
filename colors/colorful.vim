@@ -1,15 +1,15 @@
-" vim: set expandtab tabstop=4 softtabstop=4 shiftwidth=4: */
+"  vim: set expandtab tabstop=4 softtabstop=4 shiftwidth=4: */
 "
-" +--------------------------------------------------------------------------+
-" | $Id: colorful.vim 2018-10-18 10:06:29 Bleakwind Exp $                    |
-" +--------------------------------------------------------------------------+
-" | Copyright (c) 2008-2018 Bleakwind(Rick Wu).                              |
-" +--------------------------------------------------------------------------+
-" | This source file is colorful.vim.                                        |
-" | This source file is release under BSD license.                           |
-" +--------------------------------------------------------------------------+
-" | Author: Bleakwind(Rick Wu) <bleakwind@qq.com>                            |
-" +--------------------------------------------------------------------------+
+"  +-------------------------------------------------------------------------+
+"  | $Id: colorful.vim 2026-03-13 18:03:38 Bleakwind Exp $                   |
+"  +-------------------------------------------------------------------------+
+"  | Copyright (c) 2008-2026 Bleakwind(Rick Wu).                             |
+"  +-------------------------------------------------------------------------+
+"  | This source file is colorful.vim.                                       |
+"  | This source file is release under BSD license.                          |
+"  +-------------------------------------------------------------------------+
+"  | Author: Bleakwind(Rick Wu) <bleakwind@qq.com>                           |
+"  +-------------------------------------------------------------------------+
 "
 
 set background=dark
@@ -182,3 +182,4 @@ if s:t_Co >= 0
 endif
 
 " vim: et ts=4 sw=4 sts=4
+

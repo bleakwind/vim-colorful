@@ -1,15 +1,15 @@
-" vim: set expandtab tabstop=4 softtabstop=4 shiftwidth=4: */
+"  vim: set expandtab tabstop=4 softtabstop=4 shiftwidth=4: */
 "
-" +--------------------------------------------------------------------------+
-" | $Id: markdown.vim 2025-06-03 15:15:10 Bleakwind Exp $                    |
-" +--------------------------------------------------------------------------+
-" | Copyright (c) 2008-2025 Bleakwind(Rick Wu).                              |
-" +--------------------------------------------------------------------------+
-" | This source file is markdown.vim.                                        |
-" | This source file is release under BSD license.                           |
-" +--------------------------------------------------------------------------+
-" | Author: Bleakwind(Rick Wu) <bleakwind@qq.com>                            |
-" +--------------------------------------------------------------------------+
+"  +-------------------------------------------------------------------------+
+"  | $Id: markdown.vim 2026-03-13 18:04:39 Bleakwind Exp $                   |
+"  +-------------------------------------------------------------------------+
+"  | Copyright (c) 2008-2026 Bleakwind(Rick Wu).                             |
+"  +-------------------------------------------------------------------------+
+"  | This source file is markdown.vim.                                       |
+"  | This source file is release under BSD license.                          |
+"  +-------------------------------------------------------------------------+
+"  | Author: Bleakwind(Rick Wu) <bleakwind@qq.com>                           |
+"  +-------------------------------------------------------------------------+
 "
 
 if !exists('main_syntax')
@@ -85,3 +85,4 @@ endif
 
 let &cpo = s:cpo_save
 unlet s:cpo_save
+
