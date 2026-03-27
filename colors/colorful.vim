@@ -1,7 +1,7 @@
 "  vim: set expandtab tabstop=4 softtabstop=4 shiftwidth=4: */
 "
 "  +-------------------------------------------------------------------------+
-"  | $Id: colorful.vim 2026-03-13 18:03:38 Bleakwind Exp $                   |
+"  | $Id: colorful.vim 2026-03-27 20:17:39 Bleakwind Exp $                   |
 "  +-------------------------------------------------------------------------+
 "  | Copyright (c) 2008-2026 Bleakwind(Rick Wu).                             |
 "  +-------------------------------------------------------------------------+
@@ -75,22 +75,22 @@ hi DiffAdd                          ctermfg=NONE        ctermbg=DarkGreen   cter
 hi DiffChange                       ctermfg=NONE        ctermbg=Brown       cterm=NONE      guifg=NONE      guibg=#834E00   gui=NONE
 hi DiffDelete                       ctermfg=NONE        ctermbg=DarkGray    cterm=NONE      guifg=NONE      guibg=#4F4F4F   gui=NONE
 hi DiffText                         ctermfg=NONE        ctermbg=DarkBlue    cterm=NONE      guifg=NONE      guibg=#1D2088   gui=NONE
-hi Pmenu                            ctermfg=Black       ctermbg=LightGray   cterm=NONE      guifg=#000000   guibg=#A9A9A9   gui=NONE
-hi PmenuMatch                       ctermfg=Black       ctermbg=LightGray   cterm=NONE      guifg=#000000   guibg=#A9A9A9   gui=NONE
-hi PmenuKind                        ctermfg=Black       ctermbg=LightGray   cterm=NONE      guifg=#000000   guibg=#A9A9A9   gui=NONE
-hi PmenuExtra                       ctermfg=Black       ctermbg=LightGray   cterm=NONE      guifg=#000000   guibg=#A9A9A9   gui=NONE
-hi PmenuSbar                        ctermfg=Black       ctermbg=Gray        cterm=NONE      guifg=#000000   guibg=#59647A   gui=NONE
-hi PmenuThumb                       ctermfg=Black       ctermbg=DarkGray    cterm=NONE      guifg=#000000   guibg=#4C525D   gui=NONE
+hi Pmenu                            ctermfg=Black       ctermbg=LightGray   cterm=NONE      guifg=#000000   guibg=#A6ACAB   gui=NONE
+hi PmenuMatch                       ctermfg=Black       ctermbg=LightGray   cterm=NONE      guifg=#000000   guibg=#A6ACAB   gui=NONE
+hi PmenuKind                        ctermfg=Black       ctermbg=LightGray   cterm=NONE      guifg=#000000   guibg=#A6ACAB   gui=NONE
+hi PmenuExtra                       ctermfg=Black       ctermbg=LightGray   cterm=NONE      guifg=#000000   guibg=#A6ACAB   gui=NONE
+hi PmenuSbar                        ctermfg=Black       ctermbg=Gray        cterm=NONE      guifg=#000000   guibg=#4C525D   gui=NONE
+hi PmenuThumb                       ctermfg=Black       ctermbg=DarkGray    cterm=NONE      guifg=#000000   guibg=#59647A   gui=NONE
 hi PmenuSel                         ctermfg=White       ctermbg=Blue        cterm=NONE      guifg=#FFFFFF   guibg=#6A5ACD   gui=NONE
 hi PmenuMatchSel                    ctermfg=White       ctermbg=Blue        cterm=NONE      guifg=#FFFFFF   guibg=#6A5ACD   gui=NONE
 hi PmenuKindSel                     ctermfg=White       ctermbg=Blue        cterm=NONE      guifg=#FFFFFF   guibg=#6A5ACD   gui=NONE
 hi PmenuExtraSel                    ctermfg=White       ctermbg=Blue        cterm=NONE      guifg=#FFFFFF   guibg=#6A5ACD   gui=NONE
 hi ComplMatchIns                    ctermfg=White       ctermbg=Blue        cterm=NONE      guifg=#FFFFFF   guibg=#6A5ACD   gui=NONE
-hi PopupNotification                ctermfg=Black       ctermbg=LightGray   cterm=NONE      guifg=#000000   guibg=#A9A9A9   gui=NONE
+hi PopupNotification                ctermfg=Black       ctermbg=LightGray   cterm=NONE      guifg=#000000   guibg=#A6ACAB   gui=NONE
 hi PopupSelected                    ctermfg=White       ctermbg=Blue        cterm=NONE      guifg=#FFFFFF   guibg=#6A5ACD   gui=NONE
-hi TabLine                          ctermfg=Black       ctermbg=DarkGray    cterm=NONE      guifg=#A9A9A9   guibg=#21252B   gui=NONE
-hi TabLineFill                      ctermfg=Black       ctermbg=Gray        cterm=NONE      guifg=#21252B   guibg=#21252B   gui=NONE
-hi TabLineSel                       ctermfg=Black       ctermbg=LightGray   cterm=NONE      guifg=#000000   guibg=#A9A9A9   gui=NONE
+hi TabLine                          ctermfg=Black       ctermbg=DarkGray    cterm=NONE      guifg=#000000   guibg=#A8A8A8   gui=NONE
+hi TabLineFill                      ctermfg=Black       ctermbg=LightGray   cterm=NONE      guifg=#000000   guibg=#C8C8C8   gui=NONE
+hi TabLineSel                       ctermfg=Black       ctermbg=Gray        cterm=NONE      guifg=#000000   guibg=#868686   gui=NONE
 hi SpellBad                         ctermfg=NONE        ctermbg=NONE        cterm=Undercurl guifg=NONE      guibg=NONE      gui=Undercurl   guisp=#AE508D
 hi SpellCap                         ctermfg=NONE        ctermbg=NONE        cterm=Undercurl guifg=NONE      guibg=NONE      gui=Undercurl   guisp=#92BDE8
 hi SpellLocal                       ctermfg=NONE        ctermbg=NONE        cterm=Undercurl guifg=NONE      guibg=NONE      gui=Undercurl   guisp=#A3D97D
@@ -100,7 +100,7 @@ hi Terminal                         ctermfg=White       ctermbg=Black       cter
 " ------------------------------------------------
 " Code
 " ------------------------------------------------
-hi Comment                          ctermfg=DarkGray    ctermbg=NONE        cterm=NONE      guifg=#ABB2BF   guibg=NONE      gui=NONE
+hi Comment                          ctermfg=DarkGray    ctermbg=NONE        cterm=NONE      guifg=#8B929F   guibg=NONE      gui=NONE
 hi Constant                         ctermfg=LightBlue   ctermbg=NONE        cterm=NONE      guifg=#92BDE8   guibg=NONE      gui=NONE
     hi String                       ctermfg=LightRed    ctermbg=NONE        cterm=NONE      guifg=#FF939C   guibg=NONE      gui=NONE
     hi link Character               String
