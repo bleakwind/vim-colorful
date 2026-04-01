@@ -1,7 +1,7 @@
 "  vim: set expandtab tabstop=4 softtabstop=4 shiftwidth=4: */
 "
 "  +-------------------------------------------------------------------------+
-"  | $Id: c.vim 2026-04-02 02:24:08 Bleakwind Exp $                          |
+"  | $Id: c.vim 2026-04-02 03:59:04 Bleakwind Exp $                          |
 "  +-------------------------------------------------------------------------+
 "  | Copyright (c) 2008-2026 Bleakwind(Rick Wu).                             |
 "  +-------------------------------------------------------------------------+
@@ -56,11 +56,13 @@ syn match  cb_Braces display            '\v[\{\}]\c' containedin=ALLBUT,cb_Strin
 " ============================================================================
 " Color setting
 " ============================================================================
+hi c_normal                             ctermfg=White       ctermbg=NONE        cterm=NONE        guifg=#DDDDDD   guibg=NONE      gui=NONE
 hi c_structures                         ctermfg=LightGreen  ctermbg=NONE        cterm=NONE        guifg=#A3D97D   guibg=NONE      gui=NONE
 hi c_functions                          ctermfg=DarkCyan    ctermbg=NONE        cterm=NONE        guifg=#44B3B3   guibg=NONE      gui=NONE
 hi c_variables                          ctermfg=LightBlue   ctermbg=NONE        cterm=NONE        guifg=#92BDE8   guibg=NONE      gui=NONE
 hi c_string                             ctermfg=LightRed    ctermbg=NONE        cterm=NONE        guifg=#FF939C   guibg=NONE      gui=NONE
 hi c_comment                            ctermfg=DarkGray    ctermbg=NONE        cterm=NONE        guifg=#ABB2BF   guibg=NONE      gui=NONE
+hi c_value                              ctermfg=Brown       ctermbg=NONE        cterm=NONE        guifg=#E09E40   guibg=NONE      gui=NONE
 hi c_error                              ctermfg=White       ctermbg=DarkMagenta cterm=NONE        guifg=#FFFFFF   guibg=#AE508D   gui=NONE
 hi c_nothing                            ctermfg=NONE        ctermbg=NONE        cterm=NONE        guifg=NONE      guibg=NONE      gui=NONE
 hi c_unknown                            ctermfg=Black       ctermbg=Yellow      cterm=NONE        guifg=Black     guibg=Yellow    gui=NONE

@@ -1,7 +1,7 @@
 "  vim: set expandtab tabstop=4 softtabstop=4 shiftwidth=4: */
 "
 "  +-------------------------------------------------------------------------+
-"  | $Id: javascript.vim 2026-04-01 21:08:55 Bleakwind Exp $                 |
+"  | $Id: javascript.vim 2026-04-02 04:05:22 Bleakwind Exp $                 |
 "  +-------------------------------------------------------------------------+
 "  | Copyright (c) 2008-2026 Bleakwind(Rick Wu).                             |
 "  +-------------------------------------------------------------------------+
@@ -46,11 +46,13 @@ endif
 " ============================================================================
 " Color setting
 " ============================================================================
+hi javascript_normal                    ctermfg=White       ctermbg=NONE        cterm=NONE        guifg=#DDDDDD   guibg=NONE      gui=NONE
 hi javascript_structures                ctermfg=LightGreen  ctermbg=NONE        cterm=NONE        guifg=#A3D97D   guibg=NONE      gui=NONE
 hi javascript_functions                 ctermfg=DarkCyan    ctermbg=NONE        cterm=NONE        guifg=#44B3B3   guibg=NONE      gui=NONE
 hi javascript_variables                 ctermfg=LightBlue   ctermbg=NONE        cterm=NONE        guifg=#92BDE8   guibg=NONE      gui=NONE
 hi javascript_string                    ctermfg=LightRed    ctermbg=NONE        cterm=NONE        guifg=#FF939C   guibg=NONE      gui=NONE
 hi javascript_comment                   ctermfg=DarkGray    ctermbg=NONE        cterm=NONE        guifg=#ABB2BF   guibg=NONE      gui=NONE
+hi javascript_value                     ctermfg=Brown       ctermbg=NONE        cterm=NONE        guifg=#E09E40   guibg=NONE      gui=NONE
 hi javascript_error                     ctermfg=White       ctermbg=DarkMagenta cterm=NONE        guifg=#FFFFFF   guibg=#AE508D   gui=NONE
 hi javascript_nothing                   ctermfg=NONE        ctermbg=NONE        cterm=NONE        guifg=NONE      guibg=NONE      gui=NONE
 hi javascript_unknown                   ctermfg=Black       ctermbg=Yellow      cterm=NONE        guifg=Black     guibg=Yellow    gui=NONE
