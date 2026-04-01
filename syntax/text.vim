@@ -1,7 +1,7 @@
 "  vim: set expandtab tabstop=4 softtabstop=4 shiftwidth=4: */
 "
 "  +-------------------------------------------------------------------------+
-"  | $Id: text.vim 2026-04-01 20:04:14 Bleakwind Exp $                       |
+"  | $Id: text.vim 2026-04-02 04:23:51 Bleakwind Exp $                       |
 "  +-------------------------------------------------------------------------+
 "  | Copyright (c) 2008-2026 Bleakwind(Rick Wu).                             |
 "  +-------------------------------------------------------------------------+
@@ -50,6 +50,8 @@ syn match textTitleSubject              '\v^\s*\=\=\=\>\s+.*[\s\n\r]*$\c'
 syn match textTitleList                 '\v^\s*\=\>\s+.*[\s\n\r]*$\c'
 syn match textTitleRemark               '\v^\s*\-\>\s+.*[\s\n\r]*$\c'
 
+syn match textContentData               '\v^\s*\>\s+.*[\s\n\r]*$\c'
+
 syn match textContentCommand            '\v^\s*[\#\$\%][\s\n\r]*$\c'
 syn match textContentCommand            '\v^\s*[\#\$\%]\s+.*[\s\n\r]*$\c'
 
@@ -63,20 +65,33 @@ syn match textTitleCopyright            '\v^\s*\#\s[\|\+].*[\|\+]\s\#\n\s*[\#]+$
 " ============================================================================
 " Color setting
 " ============================================================================
-hi link textDelimiterTop                String
-hi link textDelimiterSubject            Statement
-hi link textDelimiterList               Function
-hi link textDelimiterRemark             Comment
+hi text_normal                          ctermfg=White       ctermbg=NONE        cterm=NONE        guifg=#DDDDDD   guibg=NONE      gui=NONE
+hi text_structures                      ctermfg=LightGreen  ctermbg=NONE        cterm=NONE        guifg=#A3D97D   guibg=NONE      gui=NONE
+hi text_functions                       ctermfg=DarkCyan    ctermbg=NONE        cterm=NONE        guifg=#44B3B3   guibg=NONE      gui=NONE
+hi text_variables                       ctermfg=LightBlue   ctermbg=NONE        cterm=NONE        guifg=#92BDE8   guibg=NONE      gui=NONE
+hi text_string                          ctermfg=LightRed    ctermbg=NONE        cterm=NONE        guifg=#FF939C   guibg=NONE      gui=NONE
+hi text_comment                         ctermfg=DarkGray    ctermbg=NONE        cterm=NONE        guifg=#ABB2BF   guibg=NONE      gui=NONE
+hi text_value                           ctermfg=Brown       ctermbg=NONE        cterm=NONE        guifg=#E09E40   guibg=NONE      gui=NONE
+hi text_error                           ctermfg=White       ctermbg=DarkMagenta cterm=NONE        guifg=#FFFFFF   guibg=#AE508D   gui=NONE
+hi text_nothing                         ctermfg=NONE        ctermbg=NONE        cterm=NONE        guifg=NONE      guibg=NONE      gui=NONE
+hi text_unknown                         ctermfg=Black       ctermbg=Yellow      cterm=NONE        guifg=Black     guibg=Yellow    gui=NONE
 
-hi link textTitleTop                    String
-hi link textTitleSubject                Statement
-hi link textTitleList                   Function
-hi link textTitleRemark                 Comment
+hi link textDelimiterTop                text_string
+hi link textDelimiterSubject            text_structures
+hi link textDelimiterList               text_functions
+hi link textDelimiterRemark             text_comment
 
-hi link textContentCommand              Identifier
-hi link textContentComment              Comment
+hi link textTitleTop                    text_string
+hi link textTitleSubject                text_structures
+hi link textTitleList                   text_functions
+hi link textTitleRemark                 text_comment
 
-hi link textTitleCopyright              Statement
+hi link textContentData                 text_normal
+
+hi link textContentCommand              text_variables
+hi link textContentComment              text_comment
+
+hi link textTitleCopyright              text_structures
 
 " ============================================================================
 " Remove global variable and cleanup
