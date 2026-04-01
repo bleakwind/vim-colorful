@@ -1,7 +1,7 @@
 "  vim: set expandtab tabstop=4 softtabstop=4 shiftwidth=4: */
 "
 "  +-------------------------------------------------------------------------+
-"  | $Id: c.vim 2026-04-01 21:06:23 Bleakwind Exp $                          |
+"  | $Id: c.vim 2026-04-02 00:59:17 Bleakwind Exp $                          |
 "  +-------------------------------------------------------------------------+
 "  | Copyright (c) 2008-2026 Bleakwind(Rick Wu).                             |
 "  +-------------------------------------------------------------------------+
@@ -42,15 +42,16 @@ endif
 " Syntax definition
 " ============================================================================
 syn region cb_String                    start=/"/ skip=/\\"/ end=/"/ contains=NONE
-syn match  cb_Variables                 '\v[\*]*\s*<\h\w*>\s*[\[\=\;\:\,\&\|\!\?\+\-\*\/\)\]]\c'me=e-1 containedin=ALLBUT,cb_String
-syn match  cb_Variables                 '\v^[\*]*\s*<\h\w*>\s*[\,\n]\c'ms=s+1,me=e-1 containedin=ALLBUT,cb_String
-syn match  cb_Variables                 '\v\;[\*]*\s*<\h\w*>\s*[\,\n]\c'ms=s+1,me=e-1 containedin=ALLBUT,cb_String
-syn match  cb_Operator                  '\v[\}]*(\s)*<\h\w*>(\s|\n)*[\{]\c'me=e-1 containedin=ALLBUT,cb_String
-syn match  cb_Operator                  '\v[\}]+(\s)*<\h\w*>(\s)*[\(]\c'me=e-1 containedin=ALLBUT,cb_String
-syn match  cb_Operator                  '\v^(\s)*<\h\w*>(\s|\n)+(\h|\*)\c'me=e-1 containedin=ALLBUT,cb_String
-syn match  cb_Operator                  '\v\;(\s)*<\h\w*>(\s|\n)+(\h|\*)\c'ms=s+1,me=e-1 containedin=ALLBUT,cb_String
-syn match  cb_Functions                 '\v(\*\(|\*)*<\h\w*>(\s|\n)*\)(\s|\n)*\(\c' containedin=ALLBUT,cb_String
-syn match  cb_Braces display            '\v[\{\}]\c' containedin=ALLBUT,cb_String
+
+syn match  cb_Variables                 '\v[\*]*\s*<\h\w*>\s*[\[\(\=\;\:\,\&\|\!\?\+\-\*\)\]]\c'me=e-1 containedin=ALLBUT,cb_String,cComment,cIncluded
+syn match  cb_Variables                 '\v^[\*]*\s*<\h\w*>\s*[\,\n]\c'ms=s+1,me=e-1 containedin=ALLBUT,cb_String,cComment,cIncluded
+syn match  cb_Variables                 '\v\;[\*]*\s*<\h\w*>\s*[\,\n]\c'ms=s+1,me=e-1 containedin=ALLBUT,cb_String,cComment,cIncluded
+syn match  cb_Operator                  '\v[\}]*(\s)*<\h\w*>(\s|\n)*[\{]\c'me=e-1 containedin=ALLBUT,cb_String,cComment,cIncluded
+syn match  cb_Operator                  '\v[\}]+(\s)*<\h\w*>(\s)*[\(]\c'me=e-1 containedin=ALLBUT,cb_String,cComment,cIncluded
+syn match  cb_Operator                  '\v^(\s)*<\h\w*>(\s|\n)+(\h|\*)\c'me=e-1 containedin=ALLBUT,cb_String,cComment,cIncluded
+syn match  cb_Operator                  '\v\;(\s)*<\h\w*>(\s|\n)+(\h|\*)\c'ms=s+1,me=e-1 containedin=ALLBUT,cb_String,cComment,cIncluded
+syn match  cb_Functions                 '\v(\*\(|\*)*<\h\w*>(\s|\n)*\)(\s|\n)*\(\c' containedin=ALLBUT,cb_String,cComment,cIncluded
+syn match  cb_Braces display            '\v[\{\}]\c' containedin=ALLBUT,cb_String,cComment,cIncluded
 
 " ============================================================================
 " Color setting
