@@ -1,7 +1,7 @@
 "  vim: set expandtab tabstop=4 softtabstop=4 shiftwidth=4: */
 "
 "  +-------------------------------------------------------------------------+
-"  | $Id: html.vim 2026-03-13 18:04:24 Bleakwind Exp $                       |
+"  | $Id: html.vim 2026-04-01 20:09:13 Bleakwind Exp $                       |
 "  +-------------------------------------------------------------------------+
 "  | Copyright (c) 2008-2026 Bleakwind(Rick Wu).                             |
 "  +-------------------------------------------------------------------------+
@@ -12,6 +12,9 @@
 "  +-------------------------------------------------------------------------+
 "
 
+" ============================================================================
+" Prevent loading twice and support syntax nesting
+" ============================================================================
 if !exists('main_syntax')
     if exists('b:current_syntax')
         finish
@@ -25,13 +28,23 @@ syntax sync fromstart
 let s:cpo_save = &cpo
 set cpo&vim
 
-runtime! $VIMRUNTIME/syntax/html.vim
+" ============================================================================
+" Inlcude other syntax file
+" ============================================================================
+let s:syntax_sys = $VIMRUNTIME . '/syntax/html.vim'
+if filereadable(s:syntax_sys) | execute 'source' s:syntax_sys | endif | unlet s:syntax_sys
+
 if exists('b:current_syntax')
     unlet b:current_syntax
 endif
 
 " ============================================================================
-" Color detail: Html
+" Syntax definition
+" ============================================================================
+" ...
+
+" ============================================================================
+" Color setting
 " ============================================================================
 hi html_normal                          ctermfg=White       ctermbg=Black       cterm=NONE        guifg=#DDDDDD   guibg=#282C34   gui=NONE
 hi html_structures                      ctermfg=LightGreen  ctermbg=NONE        cterm=NONE        guifg=#C6E8AC   guibg=NONE      gui=NONE
@@ -43,6 +56,7 @@ hi html_value                           ctermfg=Brown       ctermbg=NONE        
 hi html_error                           ctermfg=White       ctermbg=DarkMagenta cterm=NONE        guifg=#FFFFFF   guibg=#AE508D   gui=NONE
 hi html_nothing                         ctermfg=NONE        ctermbg=NONE        cterm=NONE        guifg=NONE      guibg=NONE      gui=NONE
 hi html_unknown                         ctermfg=White       ctermbg=NONE        cterm=NONE        guifg=#DDDDDD   guibg=NONE      gui=NONE
+
 hi link htmlNormal                      html_normal
 hi link htmlArg                         html_variables
 hi link htmlArgCluster                  html_unknown
@@ -109,8 +123,11 @@ hi link htmlVbScript                    html_unknown
 "hi link javaScript                      html_variables
 "hi link javaScriptExpression            html_variables
 
-"let b:current_syntax = "html"
-if main_syntax == 'html'
+" ============================================================================
+" Remove global variable and cleanup
+" ============================================================================
+let b:current_syntax = "html"
+if exists('main_syntax') && main_syntax == 'html'
     unlet main_syntax
 endif
 

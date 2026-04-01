@@ -1,7 +1,7 @@
 "  vim: set expandtab tabstop=4 softtabstop=4 shiftwidth=4: */
 "
 "  +-------------------------------------------------------------------------+
-"  | $Id: php.vim 2026-03-13 18:04:47 Bleakwind Exp $                        |
+"  | $Id: php.vim 2026-04-01 19:40:24 Bleakwind Exp $                        |
 "  +-------------------------------------------------------------------------+
 "  | Copyright (c) 2008-2026 Bleakwind(Rick Wu).                             |
 "  +-------------------------------------------------------------------------+
@@ -12,6 +12,9 @@
 "  +-------------------------------------------------------------------------+
 "
 
+" ============================================================================
+" Prevent loading twice and support syntax nesting
+" ============================================================================
 if !exists('main_syntax')
     if exists('b:current_syntax')
         finish
@@ -25,13 +28,23 @@ syntax sync fromstart
 let s:cpo_save = &cpo
 set cpo&vim
 
-runtime! $VIMRUNTIME/syntax/php.vim
+" ============================================================================
+" Inlcude other syntax file
+" ============================================================================
+let s:syntax_sys = $VIMRUNTIME . '/syntax/php.vim'
+if filereadable(s:syntax_sys) | execute 'source' s:syntax_sys | endif | unlet s:syntax_sys
+
 if exists('b:current_syntax')
     unlet b:current_syntax
 endif
 
 " ============================================================================
-" Color detail: PHP
+" Syntax definition
+" ============================================================================
+" ...
+
+" ============================================================================
+" Color setting
 " ============================================================================
 hi link phpAddStrings                   String
 hi link phpAssignByRef                  Operator
@@ -105,8 +118,11 @@ hi link phpTodo                         Todo
 hi link phpType                         Type
 hi link phpVarSelector                  Identifier
 
-"let b:current_syntax = "php"
-if main_syntax == 'php'
+" ============================================================================
+" Remove global variable and cleanup
+" ============================================================================
+let b:current_syntax = "php"
+if exists('main_syntax') && main_syntax == 'php'
     unlet main_syntax
 endif
 

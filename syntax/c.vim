@@ -1,7 +1,7 @@
 "  vim: set expandtab tabstop=4 softtabstop=4 shiftwidth=4: */
 "
 "  +-------------------------------------------------------------------------+
-"  | $Id: c.vim 2026-03-13 18:04:20 Bleakwind Exp $                          |
+"  | $Id: c.vim 2026-04-01 21:06:23 Bleakwind Exp $                          |
 "  +-------------------------------------------------------------------------+
 "  | Copyright (c) 2008-2026 Bleakwind(Rick Wu).                             |
 "  +-------------------------------------------------------------------------+
@@ -12,6 +12,9 @@
 "  +-------------------------------------------------------------------------+
 "
 
+" ============================================================================
+" Prevent loading twice and support syntax nesting
+" ============================================================================
 if !exists('main_syntax')
     if exists('b:current_syntax')
         finish
@@ -25,32 +28,32 @@ syntax sync fromstart
 let s:cpo_save = &cpo
 set cpo&vim
 
-runtime! $VIMRUNTIME/syntax/c.vim
+" ============================================================================
+" Inlcude other syntax file
+" ============================================================================
+let s:syntax_sys = $VIMRUNTIME . '/syntax/c.vim'
+if filereadable(s:syntax_sys) | execute 'source' s:syntax_sys | endif | unlet s:syntax_sys
+
 if exists('b:current_syntax')
     unlet b:current_syntax
 endif
 
 " ============================================================================
-" Color match: C
+" Syntax definition
 " ============================================================================
-syn match cVariables                    '\v[\*]*\s*<\h\w*>\s*[\[\=\;\:\,\&\|\!\?\+\-\*\/\)\]]\c'me=e-1
-syn match cVariables                    '\v^[\*]*\s*<\h\w*>\s*[\,\n]\c'ms=s+1,me=e-1
-syn match cVariables                    '\v\;[\*]*\s*<\h\w*>\s*[\,\n]\c'ms=s+1,me=e-1
-syn match cOperator                     '\v[\}]*(\s)*<\h\w*>(\s|\n)*[\{]\c'me=e-1
-syn match cOperator                     '\v[\}]+(\s)*<\h\w*>(\s)*[\(]\c'me=e-1
-syn match cOperator                     '\v^(\s)*<\h\w*>(\s|\n)+(\h|\*)\c'me=e-1
-syn match cOperator                     '\v\;(\s)*<\h\w*>(\s|\n)+(\h|\*)\c'ms=s+1,me=e-1
-syn match cOperator                     '\v(<\h\w*>\.)+\c'
-syn match cOperator                     '\v(\<\<|\>\>|\&\&|\|\||\+\+|\-\-|\-\>)\c'
-"syn match cDelimiter                    '\v[\(\)\[\]\<\>\&\*\;\+\-\=]\c'
-"syn match cDelimiter                    '\v[\(\)]+\c' contained
-"syn match cPointer                      '\v[\*]+\c' contained
-"syn match cFunctions                    '\v(\*\(|\*)*<\h\w*>(\s|\n)*\(\c' contains=cPointer,cDelimiter
-syn match cFunctions                    '\v(\*\(|\*)*<\h\w*>(\s|\n)*\)(\s|\n)*\(\c' contains=cPointer,cDelimiter
-syn match cBraces display               '\v[\{\}]\c'
+syn region cb_String                    start=/"/ skip=/\\"/ end=/"/ contains=NONE
+syn match  cb_Variables                 '\v[\*]*\s*<\h\w*>\s*[\[\=\;\:\,\&\|\!\?\+\-\*\/\)\]]\c'me=e-1 containedin=ALLBUT,cb_String
+syn match  cb_Variables                 '\v^[\*]*\s*<\h\w*>\s*[\,\n]\c'ms=s+1,me=e-1 containedin=ALLBUT,cb_String
+syn match  cb_Variables                 '\v\;[\*]*\s*<\h\w*>\s*[\,\n]\c'ms=s+1,me=e-1 containedin=ALLBUT,cb_String
+syn match  cb_Operator                  '\v[\}]*(\s)*<\h\w*>(\s|\n)*[\{]\c'me=e-1 containedin=ALLBUT,cb_String
+syn match  cb_Operator                  '\v[\}]+(\s)*<\h\w*>(\s)*[\(]\c'me=e-1 containedin=ALLBUT,cb_String
+syn match  cb_Operator                  '\v^(\s)*<\h\w*>(\s|\n)+(\h|\*)\c'me=e-1 containedin=ALLBUT,cb_String
+syn match  cb_Operator                  '\v\;(\s)*<\h\w*>(\s|\n)+(\h|\*)\c'ms=s+1,me=e-1 containedin=ALLBUT,cb_String
+syn match  cb_Functions                 '\v(\*\(|\*)*<\h\w*>(\s|\n)*\)(\s|\n)*\(\c' containedin=ALLBUT,cb_String
+syn match  cb_Braces display            '\v[\{\}]\c' containedin=ALLBUT,cb_String
 
 " ============================================================================
-" Color detail: C
+" Color setting
 " ============================================================================
 hi c_structures                         ctermfg=LightGreen  ctermbg=NONE        cterm=NONE        guifg=#A3D97D   guibg=NONE      gui=NONE
 hi c_functions                          ctermfg=DarkCyan    ctermbg=NONE        cterm=NONE        guifg=#44B3B3   guibg=NONE      gui=NONE
@@ -60,6 +63,7 @@ hi c_comment                            ctermfg=DarkGray    ctermbg=NONE        
 hi c_error                              ctermfg=White       ctermbg=DarkMagenta cterm=NONE        guifg=#FFFFFF   guibg=#AE508D   gui=NONE
 hi c_nothing                            ctermfg=NONE        ctermbg=NONE        cterm=NONE        guifg=NONE      guibg=NONE      gui=NONE
 hi c_unknown                            ctermfg=Black       ctermbg=Yellow      cterm=NONE        guifg=Black     guibg=Yellow    gui=NONE
+
 hi link cBadBlock                       c_unknown
 hi link cBadContinuation                c_unknown
 hi link cBitField                       c_unknown
@@ -137,15 +141,17 @@ hi link cType                           c_structures
 hi link cUserCont                       c_nothing
 hi link cUserLabel                      c_structures
 
-hi link cVariables                      c_variables
-hi link cOperator                       c_structures
-hi link cDelimiter                      c_structures
-hi link cPointer                        c_structures
-hi link cFunctions                      c_functions
-hi link cBraces                         c_structures
+hi link cb_String                       c_string
+hi link cb_Variables                    c_variables
+hi link cb_Operator                     c_structures
+hi link cb_Functions                    c_functions
+hi link cb_Braces                       c_structures
 
-"let b:current_syntax = "c"
-if main_syntax == 'c'
+" ============================================================================
+" Remove global variable and cleanup
+" ============================================================================
+let b:current_syntax = "c"
+if exists('main_syntax') && main_syntax == 'c'
     unlet main_syntax
 endif
 
