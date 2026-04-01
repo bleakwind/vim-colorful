@@ -1,7 +1,7 @@
 "  vim: set expandtab tabstop=4 softtabstop=4 shiftwidth=4: */
 "
 "  +-------------------------------------------------------------------------+
-"  | $Id: c.vim 2026-04-02 00:59:17 Bleakwind Exp $                          |
+"  | $Id: c.vim 2026-04-02 02:24:08 Bleakwind Exp $                          |
 "  +-------------------------------------------------------------------------+
 "  | Copyright (c) 2008-2026 Bleakwind(Rick Wu).                             |
 "  +-------------------------------------------------------------------------+
@@ -100,13 +100,13 @@ hi link cCppSkip                        c_unknown
 hi link cCppString                      c_string
 hi link cCsSpn                          c_unknown
 hi link cCurlyError                     c_error
-hi link cDefine                         c_functions
+hi link cDefine                         c_structures
 hi link cErrInBracket                   c_unknown
 hi link cErrInParen                     c_unknown
 hi link cError                          c_error
 hi link cFloat                          c_variables
 hi link cFormat                         c_variables
-hi link cInclude                        c_functions
+hi link cInclude                        c_structures
 hi link cIncluded                       c_string
 hi link cLabel                          c_structures
 hi link cLabelGroup                     c_unknown
