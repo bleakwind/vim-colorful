@@ -30,3 +30,4 @@ colorscheme colorful
 
 ## License
 BSD 2-Clause - See LICENSE file
+
