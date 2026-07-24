@@ -1,7 +1,7 @@
 "  vim: set expandtab tabstop=4 softtabstop=4 shiftwidth=4: */
 "
 "  +-------------------------------------------------------------------------+
-"  | $Id: colorful.vim 2026-03-27 20:17:39 Bleakwind Exp $                   |
+"  | $Id: colorful.vim 2026-07-25 05:40:41 Bleakwind Exp $                   |
 "  +-------------------------------------------------------------------------+
 "  | Copyright (c) 2008-2026 Bleakwind(Rick Wu).                             |
 "  +-------------------------------------------------------------------------+
@@ -86,8 +86,11 @@ hi PmenuMatchSel                    ctermfg=White       ctermbg=Blue        cter
 hi PmenuKindSel                     ctermfg=White       ctermbg=Blue        cterm=NONE      guifg=#FFFFFF   guibg=#6A5ACD   gui=NONE
 hi PmenuExtraSel                    ctermfg=White       ctermbg=Blue        cterm=NONE      guifg=#FFFFFF   guibg=#6A5ACD   gui=NONE
 hi ComplMatchIns                    ctermfg=White       ctermbg=Blue        cterm=NONE      guifg=#FFFFFF   guibg=#6A5ACD   gui=NONE
-hi PopupNotification                ctermfg=Black       ctermbg=LightGray   cterm=NONE      guifg=#000000   guibg=#A6ACAB   gui=NONE
+hi Popup                            ctermfg=Black       ctermbg=LightGray   cterm=NONE      guifg=#000000   guibg=#A6ACAB   gui=NONE
+hi PopupBorder                      ctermfg=Black       ctermbg=LightGray   cterm=NONE      guifg=#000000   guibg=#A6ACAB   gui=NONE
+hi PopupTitle                       ctermfg=Black       ctermbg=LightGray   cterm=NONE      guifg=#000000   guibg=#A6ACAB   gui=NONE
 hi PopupSelected                    ctermfg=White       ctermbg=Blue        cterm=NONE      guifg=#FFFFFF   guibg=#6A5ACD   gui=NONE
+hi PopupNotification                ctermfg=Black       ctermbg=LightGray   cterm=NONE      guifg=#000000   guibg=#A6ACAB   gui=NONE
 hi TabLine                          ctermfg=Black       ctermbg=DarkGray    cterm=NONE      guifg=#000000   guibg=#A8A8A8   gui=NONE
 hi TabLineFill                      ctermfg=Black       ctermbg=LightGray   cterm=NONE      guifg=#000000   guibg=#C8C8C8   gui=NONE
 hi TabLineSel                       ctermfg=Black       ctermbg=Gray        cterm=NONE      guifg=#000000   guibg=#868686   gui=NONE
